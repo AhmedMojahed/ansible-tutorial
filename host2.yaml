@@ -1,0 +1,10 @@
+---
+- hosts: db
+  tasks:
+    - name: copy application files
+      copy:
+        src: .
+        dest: /root/
+        owner: root
+        group: root
+        mode: 0777

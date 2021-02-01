@@ -1,0 +1,5 @@
+---
+- hosts: app
+  tasks:
+    - name: add user admin 
+      user: name=admin group=admins shell=/bin/bash
