@@ -1,6 +1,8 @@
 ---
 - name: create fileA
-  file: path=/fileA state=touch
+  file:  
+    path: /{{ filea_path }} 
+    state: touch
   notify:
     - h1
 - meta: flush_handlers
