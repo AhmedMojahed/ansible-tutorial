@@ -1,3 +1,11 @@
 ---
 - import_playbook: host1.yaml
 - import_playbook: host2.yaml
+- hosts: all
+  tasks:
+    - name: install docker 
+      script: get-docker.sh
+    - name: start docker
+      command: systemctl start docker 
+    - name: enable docker
+      command: systemctl start docker 
